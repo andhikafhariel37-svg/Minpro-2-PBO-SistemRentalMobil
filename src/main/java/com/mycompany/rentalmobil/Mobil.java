@@ -6,9 +6,9 @@ package com.mycompany.rentalmobil;
 
 /**
  *
- * @author User
+ * @author Pompom
  */
-// --- SUPERCLASS ---
+
 public abstract class Mobil {
     private static int counter = 1;
     private int id;
@@ -20,10 +20,10 @@ public abstract class Mobil {
         this.id = counter++;
         this.merk = merk;
         this.platNomor = platNomor;
-        this.namaPenyewa = "-"; // Default belum disewa
+        this.namaPenyewa = "-"; 
     }
 
-    // --- ENCAPSULATION (Getter & Setter) ---
+   
     public int getId() { return id; }
 
     public String getMerk() { return merk; }
@@ -42,7 +42,6 @@ public abstract class Mobil {
     }
 }
 
-// --- SUBCLASS 1 ---
 class MobilPenumpang extends Mobil {
     private int kapasitasPenumpang;
 
@@ -60,7 +59,6 @@ class MobilPenumpang extends Mobil {
     }
 }
 
-// --- SUBCLASS 2 ---
 class MobilAngkutan extends Mobil {
     private double kapasitasMuatanTon;
 

@@ -6,7 +6,7 @@ package com.mycompany.rentalmobil;
 
 /**
  *
- * @author User
+ * @author Pompom
  */
 import java.util.Scanner;
 
@@ -26,7 +26,6 @@ public class Main {
             System.out.println("5. Catat Penyewa Mobil");
             System.out.println("6. Keluar");
             
-            // Validasi Input Pilihan Menu
             int pilihan = bacaAngkaInt("Pilih menu (1-6): ");
 
             switch (pilihan) {
@@ -81,7 +80,7 @@ public class Main {
         }
     }
 
-    // --- VALIDASI INPUT ---
+  
     private static int bacaAngkaInt(String pesan) {
         while (true) {
             System.out.print(pesan);
