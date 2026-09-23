@@ -68,3 +68,57 @@ Pada Package RentalMobil disini ada:
   * Kelas Mobil diposisikan sebagai superclass yang mendefinisikan atribut umum seluruh unit kendaraan (seperti id, merk, platNomor, dan namaPenyewa).
   * Kelas MobilPenumpang dan MobilAngkutan bertindak sebagai subclass yang mengekstensi kelas induk untuk membawa spesifikasi unik masing-masing (jumlah kursi dan kapasitas tonase).
   * Pemanggilan super(merk, platNomor) dimanfaatkan di dalam constructor anak kelas untuk mendistribusikan inisialisasi data dasar secara langsung ke superclass.
+
+---
+
+## 5. Penjelasan Alur Program dan Dokumentasi
+Pemanggilan super(merk, platNomor) dimanfaatkan di dalam constructor anak kelas untuk mendistribusikan inisialisasi data dasar secara langsung ke superclass.
+
+Saat program dijalankan, akan menampilkan 6 menu utama
+
+<img width="238" height="94" alt="image" src="https://github.com/user-attachments/assets/b07373b5-8b78-4d48-a32f-b23300634a3c" />
+
+**1. Tambah Mobil**
+
+Menu Create (Tambah Mobil) bekerja dengan meminta pengguna memilih kategori kendaraan (MobilPenumpang atau MobilAngkutan). Pengguna lalu mengisi detail merk, plat nomor, serta atribut spesifik (kapasitas kursi atau muatan ton) yang semuanya melewati validasi input. Setelah data valid, sistem secara otomatis memberikan ID unik baru via variabel counter, membuat objek baru, dan menyimpannya ke dalam ArrayList dengan menampilkan pesan konfirmasi keberhasilan.
+
+<img width="362" height="187" alt="image" src="https://github.com/user-attachments/assets/979e6c4c-8bda-4c4c-aa22-3c636770d633" />
+
+**2. Lihat Semua Mobil**
+
+Menu Read (Lihat Semua Mobil) bekerja dengan memeriksa isi ArrayList terlebih dahulu. Jika daftar masih kosong, sistem akan menampilkan pesan bahwa data belum tersedia. Jika data terisi, sistem akan menampilkan seluruh daftar kendaraan secara rapi ke layar konsol—termasuk data dummy awal maupun data yang baru ditambahkan. Informasi yang ditampilkan mencakup ID, merk, plat nomor, status/nama penyewa, serta spesifikasi khusus sesuai tipe kendaraannya (kapasitas kursi untuk MobilPenumpang atau muatan ton untuk MobilAngkutan).
+
+<img width="515" height="147" alt="image" src="https://github.com/user-attachments/assets/b44ef47d-96c8-4472-a27b-bf5314e1b84c" />
+
+**3. Edit Data Mobil**
+
+Menu Update (Edit Data Mobil) bekerja dengan meminta pengguna memasukkan ID kendaraan yang ingin diubah. Sistem lalu mencari objek mobil tersebut di dalam ArrayList berdasarkan ID-nya. Jika ID ditemukan, pengguna diminta memasukkan data merk dan plat nomor baru yang langsung divalidasi agar tidak kosong. Setelah itu, sistem memperbarui nilai atribut kendaraan menggunakan method setter (setMerk dan setPlatNomor) dan menampilkan pesan bahwa data berhasil diperbarui. Jika ID tidak ditemukan, sistem akan memberi tahu bahwa mobil tidak ada.
+
+<img width="317" height="143" alt="image" src="https://github.com/user-attachments/assets/bbe6e764-026e-47d6-b4c7-00e14ca62e0b" />
+
+**4. Hapus Mobil**
+
+Menu Delete (Hapus Mobil) bekerja dengan meminta pengguna memasukkan ID kendaraan yang ingin dihapus dari sistem. Selanjutnya, sistem mencari posisi objek mobil tersebut di dalam ArrayList berdasarkan ID yang dimasukkan. Jika kendaraan ditemukan, objek mobil tersebut akan langsung dihapus dari daftar menggunakan metode remove(), lalu sistem menampilkan pesan konfirmasi bahwa data berhasil dihapus. Sebaliknya, jika ID tidak cocok dengan data mana pun, sistem akan memberikan notifikasi bahwa mobil tidak ditemukan.
+
+<img width="592" height="251" alt="image" src="https://github.com/user-attachments/assets/c059a612-f310-4079-b16b-fcdf36ac229b" />
+
+**5. Catat Penyewa Mobil**
+
+Menu Catat Penyewa Mobil (Update) bekerja dengan meminta pengguna memasukkan ID kendaraan dan nama calon penyewa. Sistem kemudian mencari data mobil di dalam ArrayList berdasarkan ID tersebut. Jika mobil ditemukan, sistem akan memeriksa statusnya terlebih dahulu. Apabila mobil masih belum disewa (berstatus "-"), sistem akan memperbarui nama penyewa menggunakan method setNamaPenyewa dan menampilkan pesan keberhasilan. Namun, jika mobil tersebut sudah disewa oleh orang lain, atau ID kendaraan tidak ditemukan, sistem akan memberi tahu pengguna bahwa transaksi tidak dapat diproses.
+
+<img width="503" height="254" alt="image" src="https://github.com/user-attachments/assets/79f0af36-980c-4659-87f7-d606768ebfcb" />
+
+**6. Keluar**
+
+Menu Keluar (Menu 6) bekerja dengan mengubah variabel kontrol perulangan (running) menjadi false, yang secara otomatis menghentikan siklus while loop pada program. Sebelum aplikasi benar-benar ditutup, sistem akan menampilkan pesan penutup ("Terima kasih telah menggunakan sistem ini") di konsol dan menutup objek Scanner untuk membersihkan alokasi memori.
+
+<img width="392" height="101" alt="image" src="https://github.com/user-attachments/assets/cfba3743-e642-4cf2-86a8-f2cc6f9adfdc" />
+
+
+
+
+
+
+
+
+
