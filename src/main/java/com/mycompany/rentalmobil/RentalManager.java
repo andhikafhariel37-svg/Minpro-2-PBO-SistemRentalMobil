@@ -6,7 +6,7 @@ package com.mycompany.rentalmobil;
 
 /**
  *
- * @author User
+ * @author Pompom
  */
 import java.util.ArrayList;
 
@@ -14,12 +14,12 @@ public class RentalManager {
     // Encapsulation: ArrayList bersifat private
     private ArrayList<Mobil> daftarMobil = new ArrayList<>();
 
-    // Constructor: Otomatis mengisi dummy data awal
+
     public RentalManager() {
         isiDummyData();
     }
 
-    // --- DUMMY DATA AWAL ---
+  
     private void isiDummyData() {
         daftarMobil.add(new MobilPenumpang("Toyota Avanza", "B 1234 ABC", 7));
         daftarMobil.add(new MobilAngkutan("Isuzu Elf", "B 9876 XYZ", 2.5));
